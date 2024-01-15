@@ -112,7 +112,7 @@ sky_surface = pygame.image.load(r"C:\Users\Aditi\Downloads\bu (1).png").convert(
 ground_surface = pygame.image.load(r"C:\Users\Aditi\Downloads\g1.png").convert()
 
 #instruction msg
-ins="INSTRUCITONS"
+ins="INSTRUCTIONS"
 instr = test_font.render(ins,False,(111,196,169))
 instr_rect = instr.get_rect(center = (400,80))
 
