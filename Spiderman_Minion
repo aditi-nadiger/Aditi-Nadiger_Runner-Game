@@ -10,11 +10,11 @@ def start_spiderman_game():
     class Player(pygame.sprite.Sprite):
         def __init__(self):
             super().__init__()
-            player_walk_1 = pygame.image.load(r"Spiderman\Graphics\spidey run1 (3).png").convert_alpha()
-            player_walk_2 = pygame.image.load(r"Spiderman\Graphics\spidey run3 (2).png").convert_alpha()
+            player_walk_1 = pygame.image.load(r"Spiderman\graphics\player\spidey run1 (3).png").convert_alpha()
+            player_walk_2 = pygame.image.load(r"Spiderman\graphics\player\spidey run3 (2).png").convert_alpha()
             self.player_walk = [player_walk_1,player_walk_2]
             self.player_index = 0
-            self.player_jump = pygame.image.load(r"Spiderman\Graphics\spidey jump (1).png").convert_alpha()
+            self.player_jump = pygame.image.load(r"Spiderman\graphics\player\spidey jump (1).png").convert_alpha()
 
             self.image = self.player_walk[self.player_index]
             self.rect = self.image.get_rect(midbottom = (80,300))
@@ -53,13 +53,13 @@ def start_spiderman_game():
             super().__init__()
             
             if type == 'fly':
-                goblin1 = pygame.image.load(r"C:\Users\Aditi\Downloads\greengoblin (1).png").convert_alpha()
+                goblin1 = pygame.image.load(r"Spiderman\graphics\green goblin\greengoblin (1).png").convert_alpha()
                 
                 self.frames=[goblin1]
                 y_pos = 210
             else:
-                venom1 = pygame.image.load(r"C:\Users\Aditi\Downloads\venom (1).png").convert_alpha()
-                venom2 = pygame.image.load(r"C:\Users\Aditi\Downloads\venom2 (1).png").convert_alpha()
+                venom1 = pygame.image.load(r"Spiderman\graphics\venom\venom (1).png").convert_alpha()
+                venom2 = pygame.image.load(r"Spiderman\graphics\venom\venom2 (1).png").convert_alpha()
                 self.frames = [venom1,venom2]
                 y_pos  = 300
 
@@ -100,11 +100,11 @@ def start_spiderman_game():
     screen = pygame.display.set_mode((800,400))
     pygame.display.set_caption('Runner')
     clock = pygame.time.Clock()
-    test_font = pygame.font.Font(r"C:\Users\Aditi\Downloads\Pixeltype.ttf", 50)
+    test_font = pygame.font.Font(r"Spiderman\font\Pixeltype.ttf", 50)
     game_active = False
     start_time = 0
     score = 0
-    bg_music = pygame.mixer.Sound(r"C:\Users\Aditi\Downloads\music.wav")
+    bg_music = pygame.mixer.Sound(r"Spiderman\audio\music.wav")
     bg_music.play(loops = -1)
 
     #Groups
@@ -113,8 +113,8 @@ def start_spiderman_game():
 
     obstacle_group = pygame.sprite.Group()
 
-    sky_surface = pygame.image.load(r"C:\Users\Aditi\Downloads\bu (1).png").convert()
-    ground_surface = pygame.image.load(r"C:\Users\Aditi\Downloads\g1.png").convert()
+    sky_surface = pygame.image.load(r"Spiderman\graphics\bu (1).png").convert()
+    ground_surface = pygame.image.load(r"Spiderman\graphics\g1.png").convert()
 
     #instruction msg
     ins="INSTRUCTIONS"
@@ -146,7 +146,7 @@ def start_spiderman_game():
                     running = False
 
     # Intro screen
-    player_stand = pygame.image.load(r"C:\Users\Aditi\Downloads\spidey stand (1).png").convert_alpha()
+    player_stand = pygame.image.load(r"Spiderman\graphics\player\spidey stand (1).png").convert_alpha()
     player_stand = pygame.transform.rotozoom(player_stand,0,2)
     player_stand_rect = player_stand.get_rect(center = (400,200))
 
@@ -208,17 +208,17 @@ def start_minion_game():
     class Player(pygame.sprite.Sprite):
         def __init__(self):
             super().__init__()
-            player_walk_1 = pygame.image.load(r"C:\Users\Aditi\Downloads\mini_walk1 (1).png").convert_alpha()
-            player_walk_2 = pygame.image.load(r"C:\Users\Aditi\Downloads\mini_walk2 (1).png").convert_alpha()
+            player_walk_1 = pygame.image.load(r"Minion\graphics\player\mini_walk1 (1).png").convert_alpha()
+            player_walk_2 = pygame.image.load(r"Minion\graphics\player\mini_walk2 (1).png").convert_alpha()
             self.player_walk = [player_walk_1,player_walk_2]
             self.player_index = 0
-            self.player_jump = pygame.image.load(r"C:\Users\Aditi\Downloads\mini_jump (1).png").convert_alpha()
+            self.player_jump = pygame.image.load(r"Minion\graphics\player\mini_jump (1).png").convert_alpha()
 
             self.image = self.player_walk[self.player_index]
             self.rect = self.image.get_rect(midbottom = (80,300))
             self.gravity = 0
 
-            self.jump_sound = pygame.mixer.Sound(r"C:\Users\Aditi\Downloads\jump.mp3")
+            self.jump_sound = pygame.mixer.Sound(r"Minion\audio\jump.mp3")
             self.jump_sound.set_volume(0.5)
 
         def player_input(self):
@@ -251,13 +251,13 @@ def start_minion_game():
             super().__init__()
             
             if type == 'fly':
-                fly1 = pygame.image.load(r"C:\Users\Aditi\Downloads\Fly1.png").convert_alpha()
-                fly2 = pygame.image.load(r"C:\Users\Aditi\Downloads\Fly2.png").convert_alpha()
+                fly1 = pygame.image.load(r"Minion\graphics\fly\Fly1.png").convert_alpha()
+                fly2 = pygame.image.load(r"Minion\graphics\fly\Fly2.png").convert_alpha()
                 self.frames = [fly1,fly2]
                 y_pos = 210
             else:
-                evilmini1 = pygame.image.load(r"C:\Users\Aditi\Downloads\evilmini1 (2).png").convert_alpha()
-                evilmini2 = pygame.image.load(r"C:\Users\Aditi\Downloads\evilmini2 (2).png").convert_alpha()
+                evilmini1 = pygame.image.load(r"Minion\graphics\evil minion\evilmini1 (2).png").convert_alpha()
+                evilmini2 = pygame.image.load(r"Minion\graphics\evil minion\evilmini2 (2).png").convert_alpha()
                 self.frames = [evilmini1,evilmini2]
                 y_pos  = 300
 
@@ -311,8 +311,8 @@ def start_minion_game():
 
     obstacle_group = pygame.sprite.Group()
 
-    sky_surface = pygame.image.load(r"C:\Users\Aditi\Downloads\Sky.png").convert()
-    ground_surface = pygame.image.load(r"C:\Users\Aditi\Downloads\ground.png").convert()
+    sky_surface = pygame.image.load(r"Minion\graphics\Sky.png").convert()
+    ground_surface = pygame.image.load(r"Minion\graphics\ground.png").convert()
 
     #instruction msg
     ins="INSTRUCTIONS"
@@ -343,7 +343,7 @@ def start_minion_game():
                     running = False
 
     # Intro screen
-    player_stand = pygame.image.load(r"C:\Users\Aditi\Downloads\mini_stand (2).png").convert_alpha()
+    player_stand = pygame.image.load(r"Minion\graphics\player\mini_stand (2).png").convert_alpha()
     player_stand = pygame.transform.rotozoom(player_stand,0,2)
     player_stand_rect = player_stand.get_rect(center = (400,200))
 
