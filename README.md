@@ -1,7 +1,7 @@
 # Endless Runner Game
 
 ## Description
-This simple Python application allows users to choose between two games: Spiderman and Minion. It utilizes the Tkinter library for the graphical user interface.
+This allows users to choose between two games: Spiderman and Minion. It utilizes the Tkinter library for the graphical user interface.
 This is an endless runner game developed using Pygame, where the player controls the character to avoid obstacles and score points.
 
 ## Features
