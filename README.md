@@ -45,8 +45,3 @@ Execute the following command in the terminal:
 ```bash
 python your_script_name.py
 ```
-License
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-
-
